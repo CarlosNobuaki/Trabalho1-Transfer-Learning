@@ -13,7 +13,6 @@ O fluxo completo e:
 
 ## Dataset
 - Fonte: https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000/data
-- Coluna de classe usada no treino: `dx`
 - Total de classes: 7
 
 ## Tabela de classes usadas no treinamento
@@ -31,7 +30,7 @@ O fluxo completo e:
 O arquivo `skin-cancer-classify-train.py` executa:
 
 1. **Preparacao e autenticacao Kaggle**
-   - Le credenciais de `.env`.
+   - Credenciais em `.env`.
    - Aceita `KAGGLE_USERNAME` + `KAGGLE_API_KEY` (mapeando para `KAGGLE_KEY` quando necessario).
    - Baixa o dataset se `HAM10000_metadata.csv` nao existir localmente.
 
