@@ -55,7 +55,7 @@ def load_dotenv_if_exists(env_path: Path) -> None:
 
 
 def configure_kaggle_environment() -> None:
-	# Allow local .env variables to be used without manual export.
+	# As credenciais do Kaggle estão no .env.
 	load_dotenv_if_exists(Path(".env"))
 
 	if os.getenv("KAGGLE_API_KEY") and not os.getenv("KAGGLE_KEY"):
@@ -74,7 +74,7 @@ def configure_kaggle_environment() -> None:
 			"ou crie ~/.kaggle/kaggle.json."
 		)
 
-
+# Encontra o melhor dispositivo disponível, priorizando CUDA > MPS > CPU.
 def resolve_device(device_arg: str) -> torch.device:
 	device_arg = device_arg.lower()
 	if device_arg not in {"auto", "cpu", "cuda", "mps"}:
